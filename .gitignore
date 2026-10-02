@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.vite/
+*.local
+qa/
+.env
+.env.*
+!.env.example
+.pnpm-store/

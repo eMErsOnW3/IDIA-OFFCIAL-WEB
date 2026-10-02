@@ -1,0 +1,28 @@
+import { useEffect } from 'react';
+import { Routes, Route, useLocation } from 'react-router-dom';
+import Navbar from './components/Navbar';
+import Footer from './components/Footer';
+import Home from './pages/Home';
+import Download from './pages/Download';
+import Pricing from './pages/Pricing';
+import About from './pages/About';
+import NotFound from './pages/NotFound';
+
+const metadata = {
+  '/': ['IDIA — Privacy before the prompt', 'Protect your data before AI sees it. IDIA detects and protects sensitive information before you share text, files, or images with generative AI.'],
+  '/download': ['Download IDIA — Your AI privacy layer', 'Download the IDIA Chrome Extension and learn how to install it. Windows and macOS protection are coming soon.'],
+  '/pricing': ['Pricing — IDIA', 'Explore IDIA Free, upcoming Pro protection, and planned Enterprise capabilities.'],
+  '/about': ['About Us — IDIA', 'Privacy should be built into how we use AI. Learn about IDIA’s mission, product direction, and principles.'],
+};
+export default function App() {
+  const { pathname, hash } = useLocation();
+  useEffect(() => {
+    const [title, description] = metadata[pathname.replace(/\/$/, '') || '/'] || ['Page not found — IDIA', 'Return to IDIA, your privacy layer for generative AI.'];
+    document.title = title;
+    document.querySelector('meta[name="description"]').setAttribute('content', description);
+    if (!hash) { window.scrollTo({ top: 0, behavior: 'instant' }); document.getElementById('main-content')?.focus({ preventScroll: true }); }
+    else requestAnimationFrame(() => document.getElementById(hash.slice(1))?.scrollIntoView());
+  }, [pathname, hash]);
+  return <><a className="skip-link" href="#main-content">Skip to content</a><Navbar /><main id="main-content" tabIndex={-1}><Routes><Route path="/" element={<Home />} /><Route path="/download" element={<Download />} /><Route path="/pricing" element={<Pricing />} /><Route path="/about" element={<About />} /><Route path="*" element={<NotFound />} /></Routes></main><Footer /></>;
+}
+
