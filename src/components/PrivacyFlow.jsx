@@ -6,7 +6,8 @@ export default function PrivacyFlow() {
     <span className="flow-connector flow-connector--animated" aria-hidden="true"><ArrowDown size={17} /></span>
     <div className="flow-layer"><div className="flow-shield"><ShieldCheck size={26} /></div><div><strong>IDIA Privacy Layer</strong><span>Detect · Review · Protect</span></div><span className="flow-layer-status"><span />IN YOUR CONTROL</span></div>
     <span className="flow-connector flow-connector--animated protected-path" aria-hidden="true"><ArrowDown size={17} /></span>
-    <div className="flow-content"><div><FileCheck2 size={17} /><span>Protected Content</span></div><span className="flow-sample"><mark className="token">[EMAIL_1]</mark></span></div>
+    <div className="flow-content"><div><FileCheck2 size={17} /><span>Protected Content</span></div><span className="flow-sample"><mark className="token">[IDIA_EMAIL_…]</mark></span></div>
     <span className="flow-connector" aria-hidden="true"><ArrowDown size={17} /></span><div className="flow-end"><Sparkles size={17} /><span>AI Platform</span></div>
+    <span className="flow-connector" aria-hidden="true"><ArrowDown size={17} /></span><div className="flow-end"><ShieldCheck size={17} /><span>Returned tokens → Decode locally</span></div>
   </div>;
 }
