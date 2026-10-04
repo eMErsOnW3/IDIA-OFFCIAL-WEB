@@ -11,10 +11,10 @@ import NotFound from './pages/NotFound';
 
 const metadata = {
   '/privacy': ['IDIA Privacy Policy', 'How the IDIA Chrome extension processes information, uses local browser storage, and protects user privacy. Last updated October 4, 2026.'],
-  '/': ['IDIA — Privacy before the prompt', 'Protect your data before AI sees it. IDIA detects and protects sensitive information before you share text, files, or images with generative AI.'],
+  '/': ['IDIA by IORA — Privacy before the prompt', 'Protect your data before AI sees it. IDIA detects and protects sensitive information before you share text, files, or images with generative AI.'],
   '/download': ['Download IDIA — Your AI privacy layer', 'Download the IDIA Chrome Extension and learn how to install it. Windows and macOS protection are coming soon.'],
   '/pricing': ['Pricing — IDIA', 'Explore IDIA Free, upcoming Pro protection, and planned Enterprise capabilities.'],
-  '/about': ['About Us — IDIA', 'Privacy should be built into how we use AI. Learn about IDIA’s mission, product direction, and principles.'],
+  '/about': ['About Us — IORA', 'Privacy should be built into how we use AI. Learn about IORA’s mission, the team behind IDIA, and our principles.'],
 };
 export default function App() {
   const { pathname, hash } = useLocation();

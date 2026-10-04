@@ -31,7 +31,7 @@ export default function DonationModal({ onClose }) {
     <button className="modal-close" aria-label="Close support dialog" onClick={onClose} autoFocus><X size={21} /></button>
     <div className="donation-panel">
       <img className="group-photo" src={groupPhoto.src} alt={groupPhoto.alt} width="1448" height="1086" />
-      <div className="donation-copy"><div className="eyebrow">PRIVACY IS WORTH BUILDING.</div><h2 id="support-title">Support IDIA</h2><p id="support-description">IDIA is being built by a small team working to make privacy a natural part of everyday AI use.</p><p>Your support helps us continue developing, testing, and improving the project.</p>
+      <div className="donation-copy"><div className="eyebrow">PRIVACY IS WORTH BUILDING.</div><h2 id="support-title">Support IDIA</h2><p id="support-description">IDIA is being built by IORA, a small team working to make privacy a natural part of everyday AI use.</p><p>Your support helps us continue developing, testing, and improving the project.</p>
         {supportConfig.donationUrl ? <Button href={supportConfig.donationUrl} target="_blank" rel="noopener noreferrer">View donation options</Button> : <div className="donation-placeholder">Donation options coming soon.</div>}
       </div>
     </div>

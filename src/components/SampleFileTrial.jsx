@@ -33,15 +33,17 @@ export default function SampleFileTrial() {
 
   return <section className="section container file-trial" id="try-idia" aria-labelledby="trial-title">
     <div className="section-heading"><div><div className="eyebrow">TRY IDIA</div><h2 id="trial-title">See what IDIA protects<br />before your file reaches AI.</h2></div><p>Preview a fictional handoff. Choose what stays private.<br />Keep the context that makes AI useful.</p></div>
-    <ol className="trial-steps" aria-label="Trial workflow"><li className={previewOpen ? 'is-current' : ''}>01 <span>Preview</span></li><li className={attached ? 'is-current' : ''}>02 <span>Attach & review</span></li><li className={complete ? 'is-current' : ''}>03 <span>Protect</span></li></ol>
+    <ol className="trial-steps" aria-label="Trial workflow"><li className="is-current">01 <span>Preview</span></li><li className={attached ? 'is-current' : ''}>02 <span>Attach & review</span></li><li className={complete ? 'is-current' : ''}>03 <span>Protect</span></li></ol>
     <div className="trial-grid">
       <div className="trial-source">
-        <div className="trial-source-heading"><FileText size={23} /><div><h3>{sampleFileName}</h3><p>Built-in sample · No upload needed</p></div></div>
+        <div className="trial-source-heading trial-panel-heading"><span className="mini-logo"><FileText size={18} /></span><div><h3>Sample file</h3><p>01 / Preview & attach</p></div><span className="trial-panel-meta">Local sample</span></div>
+        <div className="trial-source-body">
         <div className="trial-source-actions"><Button variant="secondary" aria-expanded={previewOpen} aria-controls={previewId} onClick={() => setPreviewOpen(!previewOpen)}><Eye size={16} />{previewOpen ? 'Hide Sample File' : 'Preview Sample File'}</Button><Button onClick={() => setAttached(true)} disabled={!previewOpen || attached}><Paperclip size={16} />{attached ? 'Added to Chat' : 'Add to Chat'}</Button></div>
         {previewOpen ? <SampleFilePreview id={previewId} /> : <div className="sample-preview-placeholder" id={previewId}><FileText size={38} /><p>A client handoff, with the details<br />you might want to keep private.</p><span>Open the sample to begin.</span></div>}
+        </div>
       </div>
       <div className={`trial-chat phase-${phase}`} aria-label="Sample file AI chat">
-        <div className="trial-chat-heading"><span className="mini-logo"><ShieldCheck size={18} /></span><strong>Your AI workspace</strong><span>Demo</span></div>
+        <div className="trial-chat-heading trial-panel-heading"><span className="mini-logo"><ShieldCheck size={18} /></span><div><h3>Your AI workspace</h3><p>02 / Review · 03 / Protect</p></div><span className="trial-panel-meta">Demo</span></div>
         <div className="trial-chat-body">
           <div className="trial-composer" role="group" aria-label="Sample chat composer">
             <p>Summarize this client handoff and identify the key action items.</p>
