@@ -1,0 +1,45 @@
+.privacy-intro { padding-block: 76px 46px; border-bottom: 1px solid var(--border); }
+.privacy-intro h1 { font-size: clamp(2.35rem, 4.4vw, 3.7rem); max-width: 850px; }
+.privacy-updated { font-size: .85rem; margin-bottom: 26px; }
+.privacy-updated time { color: var(--ink); }
+.privacy-lead { max-width: 780px; font-size: 1.05rem; margin-bottom: 0; }
+.privacy-layout { display: grid; grid-template-columns: 250px minmax(0, 1fr); gap: 72px; padding-block: 48px 96px; align-items: start; }
+.privacy-sidebar { position: sticky; top: 104px; }
+.privacy-toc { padding: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); }
+.privacy-toc h2 { font-size: .85rem; letter-spacing: .01em; margin-bottom: 16px; }
+.privacy-toc ol { padding-left: 22px; margin: 0; color: var(--muted); }
+.privacy-toc li { padding-left: 3px; font-size: .8rem; line-height: 1.5; }
+.privacy-toc li + li { margin-top: 5px; }
+.privacy-toc a { display: block; padding-block: 7px; }
+.privacy-toc a:hover { color: var(--idia-navy); text-decoration: underline; text-underline-offset: 4px; }
+.privacy-body { min-width: 0; max-width: 760px; }
+.privacy-section { scroll-margin-top: 108px; padding-bottom: 30px; margin-bottom: 30px; border-bottom: 1px solid var(--border); }
+.privacy-section:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: 0; }
+.privacy-section h2 { font-size: clamp(1.25rem, 2.2vw, 1.5rem); letter-spacing: -.025em; line-height: 1.35; margin-bottom: 18px; }
+.privacy-section h2 span { color: var(--idia-primary); }
+.privacy-section p, .privacy-section li { font-size: .97rem; line-height: 1.85; color: var(--muted); }
+.privacy-section p { margin-bottom: 14px; }
+.privacy-section p:last-child { margin-bottom: 0; }
+.privacy-section ul { margin: 0 0 18px; padding-left: 23px; }
+.privacy-section li { padding-left: 4px; margin-bottom: 5px; }
+.privacy-section li::marker { color: var(--idia-primary); }
+.privacy-email { display: inline-block; color: var(--idia-navy); text-decoration: underline; text-underline-offset: 4px; overflow-wrap: anywhere; line-height: 1.8; }
+.footer-bottom a:hover { color: var(--idia-navy); text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 900px) {
+  .privacy-layout { grid-template-columns: 210px minmax(0, 1fr); gap: 32px; }
+  .privacy-toc { padding: 20px; }
+}
+@media (max-width: 700px) {
+  .privacy-intro { padding-block: 46px 32px; }
+  .privacy-intro .eyebrow { margin-bottom: 20px; }
+  .privacy-lead { font-size: .98rem; }
+  .privacy-layout { grid-template-columns: minmax(0, 1fr); gap: 36px; padding-block: 28px 60px; }
+  .privacy-sidebar { position: static; }
+  .privacy-toc a { padding-block: 10px; }
+  .privacy-section { padding-bottom: 25px; margin-bottom: 25px; }
+}
+@media print {
+  .privacy-sidebar { display: none; }
+  .privacy-layout { display: block; }
+  .privacy-section { break-inside: avoid; }
+}
