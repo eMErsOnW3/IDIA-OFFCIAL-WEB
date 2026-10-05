@@ -2,7 +2,7 @@ import { copyFile, mkdir, writeFile } from 'node:fs/promises';
 
 // GitHub Pages has no SPA rewrite rules. Give each public route its own
 // static entry so direct links and refreshes work with BrowserRouter.
-for (const route of ['download', 'pricing', 'about', 'privacy']) {
+for (const route of ['download', 'pricing', 'about', 'privacy', 'terms']) {
   await mkdir(`dist/${route}`, { recursive: true });
   await copyFile('dist/index.html', `dist/${route}/index.html`);
 }
